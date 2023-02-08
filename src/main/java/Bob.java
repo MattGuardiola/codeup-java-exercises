@@ -26,6 +26,7 @@ public class Bob {
             }
             System.out.print("Would you like to say something else to Bob (yes/no): ");
             userChoice = input.next();
+            input.nextLine();
         }
 
 
