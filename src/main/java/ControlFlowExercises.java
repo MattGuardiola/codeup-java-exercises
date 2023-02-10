@@ -61,20 +61,20 @@ public class ControlFlowExercises {
         Scanner input = new Scanner(System.in);
 
 
-//        String userInput;
-//        do {
-//            System.out.print("Enter an integer: ");
-//            int n = input.nextInt();
-//
-//            System.out.println("Number\tSquare\tCube");
-//            System.out.println("-------------------------");
-//            for (int i = 1; i <= n; i++) {
-//                System.out.printf("%-7d | %-7d | %-7d%n", i, (i * i), (i * i * i));
-//            }
-//
-//            System.out.print("Do you want to continue (yes/no)? ");
-//            userInput = input.next();
-//        } while (userInput.equals("yes"));
+        String userInput;
+        do {
+            System.out.print("Enter an integer: ");
+            int n = input.nextInt();
+
+            System.out.println("Number\tSquare\tCube");
+            System.out.println("-------------------------");
+            for (int i = 1; i <= n; i++) {
+                System.out.printf("%-7d | %-7d | %-7d%n", i, (i * i), (i * i * i));
+            }
+
+            System.out.print("Do you want to continue (yes/no)? ");
+            userInput = input.next();
+        } while (userInput.equals("yes"));
 
 
 
