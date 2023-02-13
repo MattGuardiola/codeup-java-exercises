@@ -48,13 +48,20 @@ public class MethodsExercises {
 
     public static void findTheFactorial() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Pick a number, any number!:");
-        long number = input.nextLong();
-        long factorial = 1;
-        for (int i = 1; i <= number; i++) {
-            factorial *= i;
+        String userChoice = "yes";
+
+        while (userChoice.equals("yes")) {
+            System.out.println("Pick a number, any number!:");
+            long number = input.nextLong();
+            long factorial = 1;
+            for (int i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            System.out.println("Factorial of " + number + " is: " + factorial);
+            System.out.print("Would you like to do more math (yes/no): ");
+            userChoice = input.next();
+            input.nextLine();
         }
-        System.out.println("Factorial of " + number + " is: " + factorial);
     }
 
 
