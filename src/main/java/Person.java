@@ -1,25 +1,25 @@
 public class Person {
-    private String Name;
+    private String name;
 
     public Person(){
         this("");
     }
 
     public Person(String Name){
-        this.Name = Name;
+        this.name = Name;
     }
 
     public String getName(){
-        return Name;
+        return name;
     }
 
     public void setName(String Name){
-        this.Name = Name;
+        this.name = Name;
     }
 
 
     public void sayHello(){
-        System.out.println("Hello from " + this.Name + "!");
+        System.out.println("Hello from " + this.name + "!");
     }
 
 
@@ -31,7 +31,6 @@ public class Person {
         Person Matt = new Person();
         Matt.setName("Matt");
         Matt.sayHello();
-
 
 
 
