@@ -8,7 +8,6 @@ public class ArraysExercises {
         people[1] = new Person("Jane");
         people[2] = new Person("Bob");
 
-        Person newPerson = new Person("Alice");
 
         for (Person person : people) {
             System.out.println(person.getName());
@@ -16,7 +15,7 @@ public class ArraysExercises {
 
         System.out.println("------------------");
 
-        Person[] newPeople = addPerson(people, newPerson);
+        Person[] newPeople = addPerson(people, new Person("Alice"));
 
         for (Person person : newPeople) {
             System.out.println(person.getName());
