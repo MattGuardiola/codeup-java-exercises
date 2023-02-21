@@ -64,7 +64,7 @@ public class GradesApplication {
     }
 
 
-    public static void selectAgain(HashMap<String, Student> students){
+    public static void selectAgain(HashMap<String, Student> students) {
         Scanner input = new Scanner(System.in);
         System.out.println("Would you like information on another student? (y/n)");
         String anotherStudent = input.nextLine();
@@ -76,12 +76,6 @@ public class GradesApplication {
             System.out.println(anotherStudent + "is not a valid entry.");
             selectAgain(students);
         }
-    }
-
-
-
-    public static void displayInformation(String studentChoice){
-
     }
 
 
