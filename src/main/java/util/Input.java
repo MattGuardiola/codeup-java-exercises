@@ -18,35 +18,64 @@ public class Input {
         return input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y");
     }
 
-    public int getInt(int min, int max) {
-        int input = this.scanner.nextInt();
-        if (input >= min && input <= max) {
-            return input;
-        } else {
-            System.out.println("Invalid input. Please enter a number between " + min + " and " + max + ".");
-            return getInt(min, max);
-        }
-    }
 
     public int getInt() {
         return this.scanner.nextInt();
     }
 
+    public int getInt(int min, int max) {
+        int input;
+        try {
+            input = Integer.parseInt(getString());
+            if (input >= min && input <= max) {
+                return input;
+            }
+            System.out.printf("Not between %d and %d.%n", min, max);
+            return getInt(min, max);
+        } catch (Exception e ) {
+            System.out.println("Did not enter a valid number value.");
+            return getInt(min, max);
+        }
+    }
 
-    public double getDouble(double min, double max){
-        double input = this.scanner.nextDouble();
-        if (input >= min && input <= max) {
+    public double getDouble() {
+        double input;
+        try {
+            input = Double.parseDouble(getString());
             return input;
-        } else {
-            System.out.println("Invalid input. Please enter a number between " + min + " and " + max + ".");
+        } catch (NumberFormatException e) {
+            System.out.println("Did not enter a valid number value.");
+            return getDouble();
+        }
+    }
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        double input;
+        try {
+            input = Double.parseDouble(getString());
+            return input;
+        } catch (NumberFormatException e) {
+            System.out.println("Did not enter a valid number value.");
+            return getDouble();
+        }
+    }
+
+    public double getDouble(double min, double max) {
+        double input;
+        try {
+            input = Double.parseDouble(getString());
+            if (input >= min && input <= max) {
+                return input;
+            }
+            System.out.printf("Not between %f and %f.%n", min, max);
+            return getDouble(min, max);
+        } catch (Exception e ) {
+            System.out.println("Did not enter a valid number value.");
             return getDouble(min, max);
         }
     }
 
-
-    public double getDouble() {
-        return this.scanner.nextDouble();
-    }
 
 
     public static void main(String[] args) {
