@@ -20,7 +20,22 @@ public class Input {
 
 
     public int getInt() {
-        return this.scanner.nextInt();
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Did not enter a valid number value.");
+            return getInt();
+        }
+    }
+
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Did not enter a valid number value.");
+            return getInt();
+        }
     }
 
     public int getInt(int min, int max) {
